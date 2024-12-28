@@ -1,33 +1,13 @@
-import './App.css';
+import Video from "./components/Video";
 
 function App() {
-
-  let name = 'react app'
-  let className = 'App-header'
-  console.log('App');
-  
   return (
-    <div className="">
-     <div className={className}>
-      {name}
-      <Demo></Demo>
-     </div>
+    <div>
+      <div>Hello</div>
+      <Video bgColor="red" title="React Js"></Video>
+      <Video bgColor="green" title="Node Js"/>
     </div>
   );
 }
-
-
-function Demo() {
-  console.log('Demo');
-  
-  return (
-    <div className="App">
-     <div className="App-header">
-      <h3>Demo</h3>
-     </div>
-    </div>
-  );
-}
-
 
 export default App;
