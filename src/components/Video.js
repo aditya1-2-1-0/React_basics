@@ -1,16 +1,23 @@
 import "./Video.css";
 
-function Video({title,bgColor}) {
-    
-  let bg = "dark";
+function Video({ title, channel, views, time, verified, id, children }) {
   return (
     <>
-      <img
-        src="https://picsum.photos/200/300?grayscale"
-        alt="albert einstien"
-      />
-      <div className={bg} style={{ color: bgColor }}>
-        {title} 
+      <div className="container">
+        <div className="pic">
+          <img
+            src={`https://picsum.photos/id/${id}/300/190`}
+            alt="albert einstien"
+          />
+        </div>
+        <div className="title">{title}</div>
+        <div className="channel">
+          {channel} {verified && "✅"}
+        </div>
+        <div className="views">
+          {views} views <span>.</span> {time}
+        </div>
+        <div>{children}</div>
       </div>
     </>
   );
